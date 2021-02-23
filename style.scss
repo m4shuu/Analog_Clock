@@ -1,0 +1,90 @@
+$black: rgb(73, 69, 69);
+$red: rgb(255, 42, 42);
+$iron: #d4d7d9;
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 10px;
+}
+body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: $iron;
+  overflow: hidden;
+  
+  //rotated so the hands will be upright
+  -webkit-transform: rotate(-90deg); 
+      -ms-transform: rotate(-90deg);
+          -webkit-transform: rotate(-90deg);
+              transform: rotate(-90deg);
+}
+
+//downloaded a clock png cause manual creation's tiresome
+img { 
+  position: absolute;
+  top: 50.7%;
+  left: 50.16%;
+  width: 45em;
+  height: 45rem;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  
+  // so the color of the image will look 
+  // more similar to the color of hands
+  opacity: 0.69; 
+}
+
+// to remove the numbers from the image 
+.img-number-remover { 
+  position: absolute;
+  top: 50.7%;
+  left: 50.16%;
+  width: 36rem;
+  height: 36rem;
+  border-radius: 17rem;
+  background-color: $iron;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.hand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 0.7rem;
+  background-color: $black;
+  border-radius: 0.35rem;
+  -webkit-transform-origin: center left;
+      -ms-transform-origin: center left;
+          transform-origin: center left;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(1, -0.06, 0.15, 1.6);
+          transition: -webkit-transform 0.5s cubic-bezier(1, -0.06, 0.15, 1.6);
+  -o-transition: transform 0.5s cubic-bezier(1, -0.06, 0.15, 1.6);
+     transition: transform 0.5s cubic-bezier(1, -0.06, 0.15, 1.6);
+     transition: transform 0.5s cubic-bezier(1, -0.06, 0.15, 1.6), -webkit-transform 0.5s cubic-bezier(1, -0.06, 0.15, 1.6);
+}
+.hour {
+  width: 10rem;
+}
+.minute {
+  width: 15rem;
+}
+.second {
+  width: 15rem;
+  height: 0.3rem;
+  border-radius: 0.15rem;
+  background-color: $red;
+}
+.note{
+  position: absolute;
+  top:123%;
+  left: 16%;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
